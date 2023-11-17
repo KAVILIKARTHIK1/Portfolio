@@ -2,55 +2,60 @@
   margin: 0;
   padding: 0;
 }
-.App{
-  width: 100vw;
-  max-height: 100vh;
+.navbar-sticky{
+  position: sticky;
+  top: 0rem;
+  z-index: 1000;
 }
 nav {
   background-color: #333;
-  padding: 10px;
+  padding: 0.5rem;
 }
 .portfolio-name{
   color: white;
 }
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0px;
+  
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
 }
 h1{
   margin-right: auto;
 }
 li {
   display: inline;
-  margin-left: 10px;
+  margin-left: 5rem;
 }
-
-a {
+.MenuItems{
   color: white;
-  text-decoration: none;
   font-size: larger;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
 }
-a:hover{
-  color:#ff6f61 ;
+.MenuItems:hover{
+  color: yellow;
+  padding: 0.5rem;
+  border-bottom: 1px solid yellow;
 }
 
-.greeting {
-  position: relative;
-  bottom: -100px;
-  text-align: left;
+
+/*Home.js*/
+.additional-section {
+  display: flex;
+  height: 15rem;
   margin: 100px;
-  width: 50%;
+  gap: 300px;
+  justify-content: space-around;
+}
+.greeting {
   height: 70vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .greeting h1{
-  font-size: 50px;
+  font-size: 60px;
   color: black;
   
 }
@@ -58,32 +63,28 @@ a:hover{
   display: inline-block;
   color: blue;
 }
-.additional-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 350px;
-  padding-top: 20px;
-}
 .fadein{
   opacity: 0;
   animation: fadeIn 3s forwards;
 }
 .profile-photo img {
-  width: 500px;
-  position: relative;
-  border-radius: 2px;
-  right: 100px;
+  width: 600px;
+  border-radius: 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
-
+.icons{
+  display: flex;
+  padding-top: 10px;
+  gap: 20px;
+}
 .contact-btn button {
-  background-color: #007bff; /* Adjust the background color as needed */
+  background-color: #007bff; 
   color: white;
   margin-top: 30px;
   padding: 10px 20px;
@@ -91,60 +92,161 @@ a:hover{
   cursor: pointer;
   border-radius: 20px;
 }
-
+.contact-btn button:hover{
+  background-color: rgb(94, 87, 255);
+}
 .profile-photo img:hover {
-  transform: scale(1.2); /* Adjust the scale factor for zooming */
-}
-.about-img{
-  float: left;
-  margin-right: 20px;
-}
-.about-img img {
-  object-fit: cover;
-  width: 300px; /* Adjust the width as needed */
-  height: auto;
-  border-radius: 30px; /* Make the image round if needed */
-  padding-left: 50px;
-
+  transform: scale(1.2); 
 }
 
-/* Additional styling */
+/* About.js*/
+.about-img img{
+  border-radius: 20px;
+}
 .About {
-  text-align: center;
-  padding: 20px;
-  height: 300px;
+  display: flex;
+  gap: 200px;
+  margin-left: 80px;
+  padding-top: 50px;
+  height: 350px;
 }
-
-.title {
-  font-size: 2em;
-  color: black;
-}
-
 .Descr h1{
   color: #000;
-  padding: 50px;
-  }
+}
 .Descr p{
-  line-height: 1.6;
+  line-height: 2.0;
 }
 .Descr .Bio{
   font-size: larger;
   display: inline-block;
-  width: 700px;
-  height: 100px;
+  width: 650px;
+  height: 50px;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
-.icons{
+/*Skills*/
+.Skills{
+  display: flex;
+  margin-left: 50px;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.skillsbio{
+  display: inline-block;
+  width: 600px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: larger;
+  line-height: 2.0;
+}
+.List{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Data{
+  width: calc(30% - 15px); 
+  height: 50px;
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+  border: 1px solid #ccc; 
+}
+
+/*Projects*/
+.project{
+height: 280px;
+margin-left: 70px;
+display: flex;
+justify-content: space-around;
+}
+.project a{
+  transition: transform 0.3s ease;
+}
+.Project-Names{
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.project img{
+  border-radius: 10px;
+}
+.project img:hover{
+  border-radius: 20px;
+  transform: scale(1.2); 
+}
+
+/*Contact*/
+.Contact{
+  height: 400px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.getTouch{
+  display: inline;
+  width: 500px;
+  height: 500px;
+  line-height: 1.5;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.Feedback{
+  padding: 10px;
+}
+.Feedback input {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+.Feedback .Emailinput{
+  margin: 20px 0px 20px 0px;
+}
+.Feedback textarea{
+  border-radius: 7px;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+button{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 20%;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+button:hover{
+  cursor: pointer;
+  background-color: green;
+}
+
+/*Footer.js*/
+.Footer{
+  height: 200px;
+  background-color: black;
+  color: white;
+}
+.copyright{
+  margin-top: 30px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 20px;
-  position: relative;
-  top: -200px;
-  left: 500px;
+  align-items: center;
 }
-
-.skillsbio{
-  font-family: Comic Sans MS, Comic Sans, cursive;
+.copyright h2{
+  margin-bottom: 30px;
+}
+.footericons{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }

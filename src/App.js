@@ -3,6 +3,9 @@ import Navbar from './Header/Navbar';
 import Home from './Header/Home';
 import About from './Header/About';
 import Skills from './Header/Skills';
+import Projects from './Header/Projects';
+import Contact from './Header/Contact';
+import Footer from './Header/Footer';
 function App() {
   return(
   <div className="App">
@@ -10,6 +13,9 @@ function App() {
     <Home/>
     <About/>
     <Skills/>  
+    <Projects/>
+    <Contact/>
+    <Footer/>
   </div>
   )
 }

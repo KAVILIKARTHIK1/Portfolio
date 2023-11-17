@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link } from "react-scroll";
 function Home() {
   return (
     <>
@@ -13,9 +14,13 @@ function Home() {
             <span>Karthik</span>
           </h1>
           <div className="contact-btn">
-            <a href="#about">
+            <Link>
+              <button className="hireme-btn">Hire Me</button>
+            </Link>
+            <Link>
               <button type="submit">Contact Me</button>
-            </a>
+            </Link>
+            
           </div>
           <div className="icons">
             <a id="linkedin" href="https://www.linkedin.com/in/karthik-kavili/">
@@ -29,8 +34,9 @@ function Home() {
             </a>
           </div>
         </div>
+       
         <div className="profile-photo fadein">
-          <img src="karthii.jpg" alt="karthik" />
+          <img  src="karthii.jpg" alt="karthik" />
         </div>
       </section>
     </>
